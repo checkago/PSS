@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
-from .models import News
+from .models import News, Project
 
 
 def index(request):
@@ -40,9 +40,17 @@ def news(request, pk):
 
 
 def projects(request):
+    projects = Project.objects.all()
     title = 'Projects'
     description = ''
-    return render(request, 'projects.html', {'title': title, 'description': description})
+    return render(request, 'projects.html', {'title': title, 'description': description, 'projects': projects})
+
+
+def project(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+    title = project.title
+    description = ''
+    return render(request, 'project.html', {'title': title, 'description': description, 'project': project})
 
 
 def vacancies(request):
