@@ -2,7 +2,6 @@ from datetime import date
 from django.db import models
 
 
-
 class News(models.Model):
     title = models.CharField(max_length=250, verbose_name='Название')
     slug = models.SlugField(unique=True, verbose_name='Псевдоним')
