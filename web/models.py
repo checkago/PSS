@@ -29,7 +29,7 @@ class Category(models.Model):
 
 
 class Gallery(models.Model):
-    category = models.ForeignKey(Category, verbose_name='Категория')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     image = models.ImageField(upload_to='gallery', verbose_name='Фото')
 
 
