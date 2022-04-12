@@ -4,6 +4,201 @@
 
 {% block content %}
 
-    Hello
+        <section class="section-padding gray-bg">
+          <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Наши объекты</h2>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="portfolio-section">
+          <div class="container-fluid">
+            <!-- First Portfolio -->
+            <div class="row no-gutter equal-height-row">
+
+              <div class="col-md-6">
+                <div class="valign-wrapper">
+                  <div class="valign-cell portfolio-wrapper equal-height-column">
+                    <h2 class="text-bold text-uppercase font-35 line-height-40 mb-20">государственные объекты</h2>
+                    <ul>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Фонд Сколково</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Центральный банк РФ</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Административные</li>
+                    </ul>
+
+                    <a href="{% url 'gos' %}" class="btn btn-lg text-capitalize text-bold mt-30 waves-effect waves-light">Подробнее</a>
+                  </div>
+                </div><!-- /.valign-wrapper -->
+              </div><!-- /.col-md-6 -->
+
+              <div class="col-md-6">
+                <div class="equal-height-column">
+                  <img class="img-responsive" src="{% static 'img/projects/gos.jpg' %}" alt="">
+                </div>
+              </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <!-- Second Portfolio -->
+            <div class="row no-gutter equal-height-row">
+
+              <div class="col-md-6 col-md-push-6">
+                <div class="valign-wrapper">
+                  <div class="valign-cell portfolio-wrapper equal-height-column">
+                    <h2 class="text-bold text-uppercase font-35 line-height-40 mb-20">Инфраструктурное и дорожное строительство</h2>
+                    <ul>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Капитальный ремонт объекта «Путепровод на Дунайском проспекте» г. Санкт-Петербург</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Капитальный ремонт объекта «Володарский мост» г. Санкт-Петербург</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Ремонт дорог и тротуаров на территории г. Валдай, Новгородская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Капитальный ремонт объекта «ул. Савушкина» г. Санкт-Петербург</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Капитальный ремонт объекта «Путепровод в створе проспекта Косыгина через железнодорожные пути станции «Заневский мост» г. Санкт-Петербург</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Строительство автобусной разворотной площадки с необходимой инфраструктурой, г.: Санкт-Петербург, Петроградский р-н, Крестовский проспект, 25</li>
+                    </ul>
+
+                    <a href="infra" class="btn btn-lg text-capitalize text-bold mt-30 waves-effect waves-light">Другие работы</a>
+                  </div>
+                </div><!-- /.valign-wrapper -->
+              </div><!-- /.col-md-6 -->
+
+              <div class="col-md-6 col-md-pull-6">
+                <div class="equal-height-column">
+                  <img class="img-responsive" src="{% static 'img/projects/infra.jpg' %}" alt="">
+                </div>
+              </div><!-- /.col-md-6 -->
+
+            </div><!-- /.row -->
+
+            <!-- Third Portfolio -->
+            <div id="prom" class="row no-gutter equal-height-row">
+
+              <div class="col-md-6">
+                <div class="valign-wrapper">
+                  <div class="valign-cell portfolio-wrapper equal-height-column">
+                    <h2 class="text-bold text-uppercase font-35 line-height-40 mb-20">Промышленное строительство</h2>
+                    <ul>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Нефтеналивной терминал п. Унеча, Брянская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Завод сухих смесей г. Карабулак</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Завод Железобетонных Изделий г. Карабулак</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Завод по производству газобетонных блоков г. Карабулак</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Завод по производству осветительного оборудования на базе сверхярких светодиодов, Республика Ингушетия</li>
+                    </ul>
+
+                    <a href="prom" class="btn btn-lg text-capitalize text-bold mt-30 waves-effect waves-light">Подробнее</a>
+                  </div>
+                </div><!-- /.valign-wrapper -->
+              </div><!-- /.col-md-6 -->
+
+              <div class="col-md-6">
+                <div class="equal-height-column">
+                  <img class="img-responsive" src="{% static 'img/projects/prom.jpg' %}" alt="">
+                </div>
+              </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <!-- Fourth Portfolio -->
+            <div class="row no-gutter equal-height-row">
+
+              <div class="col-md-6 col-md-push-6">
+                <div class="valign-wrapper">
+                  <div class="valign-cell portfolio-wrapper equal-height-column">
+                    <h2 class="text-bold text-uppercase font-35 line-height-40 mb-20">Жилое строительство</h2>
+                    <ul>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Многоквартирный жилой дом г. Ростов-на-Дону по пр. Королёва 6/7 16-ти этажный</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Многоквартирный жилой дом в Северном р-не г. Ростов-на-Дону по ул. Вселенная д. 5</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> 110 квартирный жилой дом с подземным паркингом, Крестовский пр., д.34 «Фаворит» г. Санкт-Петербург</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> 80 квартирный жилой дом г. Буденновск Ставропольского края</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> 16 квартирный жилой дом г.Сочи Краснодарский край</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> 144 квартирный жилой дом г.Черкесск Карачаево-Черкесская Республика</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> 18 квартирный жилой дом г. Аксай Ростовская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> 96 квартирный жилой дом г. Ростове-на-Дону, ул. Таганрогская, 145/4</li>
+                    </ul>
+
+                    <a href="jil" class="btn btn-lg text-capitalize text-bold mt-30 waves-effect waves-light">Больше</a>
+                  </div>
+                </div><!-- /.valign-wrapper -->
+              </div><!-- /.col-md-6 -->
+
+              <div class="col-md-6 col-md-pull-6">
+                <div class="equal-height-column">
+                  <img class="img-responsive" src="{% static 'img/projects/jil.jpg' %}" alt="">
+                </div>
+              </div><!-- /.col-md-6 -->
+
+            </div><!-- /.row -->
+
+             <!-- Five Portfolio -->
+            <div class="row no-gutter equal-height-row">
+
+              <div class="col-md-6">
+                <div class="valign-wrapper">
+                  <div class="valign-cell portfolio-wrapper equal-height-column">
+                    <h2 class="text-bold text-uppercase font-35 line-height-40 mb-20">Торгово-коммерческое строительство</h2>
+                    <ul>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Торговый комплекс гипермаркет г. Ставрополь, ул. Доваторцев 64</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Торговый комплекс гипермаркет г. Тула, ул. Сойфера 18</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Торговый комплекс гипермаркет г.Черкесск, ул. Октябрьская, 354</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Торговый комплекс гипермаркет г. Волгодонск, проспект Курчатова</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Торговый комплекс «Юго-Западный» г. Назрань</li>
+                    </ul>
+
+                    <a href="torg" class="btn btn-lg text-capitalize text-bold mt-30 waves-effect waves-light">Подробнее</a>
+                  </div>
+                </div><!-- /.valign-wrapper -->
+              </div><!-- /.col-md-6 -->
+
+              <div class="col-md-6">
+                <div class="equal-height-column">
+                  <img class="img-responsive" src="{% static 'img/projects/torg.jpg' %}" alt="">
+                </div>
+              </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <!-- Six Portfolio -->
+            <div class="row no-gutter equal-height-row">
+
+              <div class="col-md-6 col-md-push-6">
+                <div class="valign-wrapper">
+                  <div class="valign-cell portfolio-wrapper equal-height-column">
+                    <h2 class="text-bold text-uppercase font-35 line-height-40 mb-20">Административные здания</h2>
+                    <ul>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Спортивный комплекс с плавательным бассейном г. Агинское Бурятский автономный округ, Забайкальский край</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Физкультурно-оздоровительный комплекс г. Малгобек, Республика Ингушетия</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Дворец Культуры г. Магас, Республика Ингушетия</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Больница на 200 коек, блок «В», г. Сортавала, Республика Карелия</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Больница реконструкция г. Урус-Мартан Чеченская республика</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Ветеринарная лаборатория, ст-ца. Орджоникидзевская Республика Ингушетия</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Школа общеобразовательная г. Грозный Чеченская республика</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i> Школа общеобразовательная «Марем», г. Магас, Республика Ингушетия</li>
+                    </ul>
+
+                    <a href="admin" class="btn btn-lg text-capitalize text-bold mt-30 waves-effect waves-light">Далее</a>
+                  </div>
+                </div><!-- /.valign-wrapper -->
+              </div><!-- /.col-md-6 -->
+
+              <div class="col-md-6 col-md-pull-6">
+                <div class="equal-height-column">
+                  <img class="img-responsive" src="{% static 'img/projects/admin.jpg' %}" alt="">
+                </div>
+              </div><!-- /.col-md-6 -->
+
+            </div><!-- /.row -->
+          </div>
+        </section>
+
+
+        <section class="promo-box brand-bg section-padding">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="promo-info">
+                        <h2 class="white-text text-bold font-35">Хотите узнать подробнее о наших объектах?</h2>
+                    </div>
+                    <div class="promo-btn">
+                        <a href="more" class="btn btn-lg white waves-effect waves-dark text-capitalize">Нажмите мы покажем</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 {% endblock %}

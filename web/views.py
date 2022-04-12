@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
-from .models import News, Project
+from .models import News
 
 
 def index(request):
@@ -40,17 +40,45 @@ def news(request, pk):
 
 
 def projects(request):
-    projects = Project.objects.all()
     title = 'Projects'
     description = ''
-    return render(request, 'projects.html', {'title': title, 'description': description, 'projects': projects})
+    return render(request, 'projects.html', {'title': title, 'description': description})
 
 
-def project(request, pk):
-    project = get_object_or_404(Project, pk=pk)
-    title = project.title
+def gos(request):
+    title = 'Title'
     description = ''
-    return render(request, 'project.html', {'title': title, 'description': description, 'project': project})
+    return render(request, 'gos.html', {'title': title, 'description': description})
+
+
+def infra(request):
+    title = 'Title'
+    description = ''
+    return render(request, 'infra.html', {'title': title, 'description': description})
+
+
+def prom(request):
+    title = 'Title'
+    description = ''
+    return render(request, 'prom.html', {'title': title, 'description': description})
+
+
+def jil(request):
+    title = 'Title'
+    description = ''
+    return render(request, 'jil.html', {'title': title, 'description': description})
+
+
+def torg(request):
+    title = 'Title'
+    description = ''
+    return render(request, 'torg.html', {'title': title, 'description': description})
+
+
+def admin(request):
+    title = 'Title'
+    description = ''
+    return render(request, 'admin.html', {'title': title, 'description': description})
 
 
 def vacancies(request):

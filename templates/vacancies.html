@@ -4,6 +4,119 @@
 
 {% block content %}
 
-    Hello
+        <!-- Hero Section -->
+        <section class="agency-banner-3 bg-fixed parallax-bg overlay dark-7 ptb-190" data-stellar-background-ratio="0.5">
+            <div class="container">
+              <div class="career-cover text-center">
+                <h2 class="white-text text-bold">Присоединяйтесь к нашей команде</h2>
+              </div><!-- /.container -->
+            </div><!-- /.container -->
+        </section>
+        <!-- Hero Section End -->
+
+
+        <!-- contact-form-section -->
+        <section class="section-padding gray-bg">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <form name="contact-form" id="contactForm" action="" method="POST">
+
+                    <div class="row">
+                      <div class="col-md-6">
+
+                        <div class="input-field">
+                          <input type="text" name="first-name" class="validate" id="first-name">
+                          <label for="first-name">Имя*</label>
+                        </div>
+
+                      </div><!-- /.col-md-6 -->
+
+                      <div class="col-md-6">
+
+                        <div class="input-field">
+                          <input type="text" name="last-name" class="validate" id="last-name">
+                          <label for="last-name">Фамилия*</label>
+                        </div>
+
+                      </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+
+
+                    <div class="input-field">
+                      <input id="email" type="email" name="email" class="validate" >
+                      <label for="email" data-error="wrong" data-success="right">Email адрес*</label>
+                    </div>
+
+                    <div class="input-field">
+                      <input id="phone" type="tel" name="phone" class="validate" >
+                      <label for="phone">Номер телефона</label>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+
+                        <div class="input-field">
+                          <input id="portfolio" type="text" name="portfolio" class="validate" >
+                          <label for="portfolio">Ссылка на портфолио*</label>
+                        </div>
+
+                      </div><!-- /.col-md-6 -->
+
+                      <div class="col-md-6">
+
+                        <div class="input-field">
+                          <input id="LinkedIn-profile" type="text" name="LinkedIn-profile" class="validate" >
+                          <label for="LinkedIn-profile">Профиль в соц. сетях*</label>
+                        </div>
+
+                      </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+
+
+                    <div class="input-field">
+                      <textarea name="message" id="message" class="materialize-textarea" ></textarea>
+                      <label for="message">Где Вы узнали о вакансии?</label>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-md-6">
+
+                        <div class="input-field">
+                          <div class="custom-upload">
+                              <span>Резюме*</span>
+                              <input id="uploadBtnOne" type="file" class="upload" />
+                          </div>
+                          <input class="disabled-input" id="uploadFileOne" placeholder="Выбрать файл" disabled="ebabled" />
+                        </div>
+
+                      </div><!-- /.col-md-6 -->
+
+                      <div class="col-md-6">
+
+                        <div class="input-field">
+                          <div class="custom-upload">
+                              <span>Письмо</span>
+                              <input id="uploadBtnTwo" type="file" class="upload" />
+                          </div>
+                          <input class="disabled-input" id="uploadFileTwo" placeholder="Выбрать файл" disabled="enabled" />
+                        </div>
+
+                      </div><!-- /.col-md-6 -->
+
+                    </div><!-- /.row -->
+
+                    <div class="text-center">
+                      <button type="submit" name="submit" class="waves-effect waves-light btn btn-lg text-capitalize text-bold mt-80">Отправить</button>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- contact-form-section End -->
 
 {% endblock %}

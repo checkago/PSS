@@ -17,17 +17,20 @@ class News(models.Model):
         return self.title
 
 
-class Project(models.Model):
-    title = models.CharField(max_length=150, verbose_name='Название')
-    slug = models.SlugField(unique=True, verbose_name='Псевдоним')
+class Category(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Название')
 
     class Meta:
-        verbose_name = 'Проект'
-        verbose_name_plural = 'Проекты'
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
 
     def __str__(self):
-        return self.title
+        return self.name
 
+
+class Gallery(models.Model):
+    category = models.ForeignKey(Category, verbose_name='Категория')
+    image = models.ImageField(upload_to='gallery', verbose_name='Фото')
 
 
 

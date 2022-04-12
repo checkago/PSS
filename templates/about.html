@@ -1,10 +1,390 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+
+        <section class="section-padding">
+          <div class="container">
+            <div class="row equal-height-row">
+              <div class="col-sm-4">
+                <div class="valign-wrapper">
+                  <div class="section-title valign-cell equal-height-column">
+                    <h2 class="section-title">Кто мы?</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="equal-height-column">
+                  <p>Мы — Команда единомышленников, для которой работа, жизнь и строительный бизнес стоят на одной шкале ценностей: наша жизнь — это наша Компания, а Компания — вторая семья. Эти понятия и концепции для нас ценны и едины.</p>
+
+                <p>Безупречно выполненная работа — это наша гордость. А справедливой оценкой результатов и дополнительной мотивацией для движения вперед мы считаем искреннюю благодарность даже от самых требовательных клиентов.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="mocup-wrapper text-center">
+            <img class="img-responsive" src="{% static 'img/agency/we.jpg' %}" alt="">
+        </div>
+
+        <section class="section-padding">
+          <div class="container">
+
+
+              <div class="text-center mb-80">
+                  <h2 class="section-title">Наши преимущества</h2>
+                  <p class="section-sub">Мы гордимся, что можем Командой преодолеть и решить проблему, с которой наши конкуренты не смогли бы справиться. В бизнес-мире, где компании предпочитают делегировать ответственность, мы всей командой берем ответственность в свои руки и выполняем заказ. Поскольку именно так по нашему мнению сделал бы лучший строитель!</p>
+              </div>
+
+
+              <div class="row">
+                    <div class="col-md-4">
+                        <div class="featured-item feature-icon icon-hover icon-hover-brand icon-circle icon-outline border-right">
+                            <div class="icon">
+                                <i class="fas fa-chart-line colored brand-icon"></i>
+                            </div>
+                            <div class="desc">
+                                <h2>Стратегия</h2>
+                                <p>Досконально продуманный план действий каждого члена команды, позволяющий организовать слаженнную работу как в отдельном проекте, так и компании в целом.</p>
+                            </div>
+                        </div><!-- /.featured-item -->
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-md-4">
+                        <div class="featured-item feature-icon icon-hover icon-hover-brand icon-circle icon-outline border-right">
+                            <div class="icon">
+                                <i class="fas fa-pencil-ruler colored brand-icon"></i>
+                            </div>
+                            <div class="desc">
+                                <h2>Проектирование</h2>
+                                <p>Наши проффесионалы уже на этапе проектирования проводят оптимизацию всех проектов, позволяя выполнять строительство в кратчайщие сроки и с высочайщим качеством.</p>
+                            </div>
+                        </div><!-- /.featured-item -->
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-md-4">
+                        <div class="featured-item feature-icon icon-hover icon-hover-brand icon-circle icon-outline border-right last">
+                            <div class="icon">
+                               <i class="fas fa-city colored brand-icon"></i>
+                            </div>
+                            <div class="desc">
+                                <h2>Строительство</h2>
+                                <p>Скорость и качество строительства, самые важные аспекты работы нашей компании. Инженеры и строители-профессионалы, это залог нашего преимущества.</p>
+                            </div>
+                        </div><!-- /.featured-item -->
+                    </div><!-- /.col-md-4 -->
+              </div>
+
+          </div>
+        </section>
+
+
+        <section class="section-padding gray-bg">
+          <div class="container">
+
+              <div class="text-center mb-80">
+                  <h2 class="section-title">знакомьтесь с нашей командой</h2>
+                  <p class="section-sub">Директор, топ-менеджер, начальник — это не просто слова и должности, для нас это, прежде всего лидеры в команде профессионалов.</p>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="team-wrapper text-center">
+                      <div class="team-img">
+                          <a href="#"><img src="{% static 'img/agency/team/team-1.jpg' %}" class="img-responsive" alt="Image"></a>
+                      </div><!-- /.team-img -->
+
+                      <div class="team-title">
+                          <h3><a href="#">С. Чернигин</a></h3>
+                          <span>Руководитель проектов</span>
+                      </div><!-- /.team-title -->
+
+                 </div><!-- /.team-wrapper -->
+                </div><!-- /.col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                  <div class="team-wrapper text-center">
+                      <div class="team-img">
+                          <a href="#"><img src="{% static 'img/agency/team/team-2.jpg' %}" class="img-responsive" alt="Image"></a>
+                      </div><!-- /.team-img -->
+
+                      <div class="team-title">
+                          <h3><a href="#">А. Трофимов</a></h3>
+                          <span>Главный инженер проекта</span>
+                      </div><!-- /.team-title -->
+
+                  </div><!-- /.team-wrapper -->
+                </div><!-- /.col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                  <div class="team-wrapper text-center">
+                      <div class="team-img">
+                          <a href="#"><img src="{% static 'img/agency/team/team-3.jpg' %}" class="img-responsive" alt="Image"></a>
+                      </div><!-- /.team-img -->
+
+                      <div class="team-title">
+                          <h3><a href="#">А. Рябов</a></h3>
+                          <span>Архитектор - проектировщик</span>
+                      </div><!-- /.team-title -->
+
+                  </div><!-- /.team-wrapper -->
+                </div><!-- /.col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                  <div class="team-wrapper text-center">
+                      <div class="team-img">
+                          <a href="#"><img src="{% static 'img/agency/team/team-4.jpg' %}" class="img-responsive" alt="Image"></a>
+                      </div><!-- /.team-img -->
+
+                      <div class="team-title">
+                          <h3><a href="#">С. Алимова</a></h3>
+                          <span>Логистика и снабжение</span>
+                      </div><!-- /.team-title -->
+                    </div><!-- /.team-wrapper -->
+                </div><!-- /.col-md-3 -->
+
+              </div><!-- /.row -->
+
+          </div>
+        </section>
+
+
+        <section class="section-padding dark-bg">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                <h2 class="white-text text-bold font-35">История компании</h2>
+                 <p>Акционерное Общество <strong>“ПРОМСТРОЙСЕРВИС”</strong> образовано в 1996 году и на сегодняшний день является строительной компанией с годовым оборотом более 2,5 миллиардов рублей. Мы проделали длинный путь. Времена изменились - изменилась и Наша Компания, но одна вещь никогда не меняется и не будет  меняться - это Наша подлинная вера в то, что Мы делаем жизнь людей в России комфортнее.</p>
+                 <p>Сегодня <strong>“ПРОМСТРОЙСЕРВИС”</strong> является единой структурой, объединяющей головную организацию, работающую по всей территории РФ и целый ряд подразделений в различных регионах России. За свою двадцатилетнюю историю мы воплотили в жизнь более 400 проектов! Среди построенных и строящихся объектов: административные и банковские здания, жилые дома и коттеджные посёлки, торговые центры и общественные здания, объекты специального назначения, промышленно-складские сооружения, а также объекты социально-культурной сферы.</p>
+                 <p>Штат компании сформирован из дипломированных специалистов всех строительных специальностей, готовых не только быстро строить, но и следить за качеством выполняемых работ, осуществлять техническое обследование объектов и технический надзор за строительством.</p>
+                 <p>В настоящее время мы объединяем более 1000 работников-специалистов  различных строительных профессий и более 50 партнеров-субподрядчиков по нашим Проектам.</p>
+                 <p><strong>Компания АО “ПРОМСТРОЙСЕРВИС”</strong> сосредотачивается на том, чтобы использовать профессиональное превосходство своих специалистов и партнеров для обеспечения творческого решения задач Клиента и Заказчика. Успех в жизни и бизнесе наиболее эффективен, когда наши Партнёры  разделяют те же самые ценности.</p>
+                 <p>Мы гордимся, что можем Командой преодолеть и решить проблему, с которой наши конкуренты не смогли бы справиться. В бизнес-мире, где компании предпочитают делегировать ответственность, мы всей командой берем ответственность в свои руки и выполняем заказ. Поскольку именно так по нашему мнению сделал бы лучший строитель!</p>
+                 <h3 class="white-text">АО  “ПРОМСТРОЙСЕРВИС” —  это 20 лет стабильности и безупречного качества!</h3>
+                </div>
+              </div><!-- /.row -->
+
+          </div><!-- /.container -->
+        </section>
+
+        <section class="section-padding gray-bg">
+          <div class="container">
+              <div class="col-md-4">
+                  <h3 class="section-title">География присутствия</h3>
+                  <strong>География выполнения работ АО “ПРОМСТРОЙСЕРВИС” охватывает целый ряд регионов  Российской Федерации:</strong>
+                  <hr>
+                  <ul class="list">
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Москва и Московская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Санкт-Петербург и Ленинградская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Калининградская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Краснодарский край</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Ростовская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Ставропольский край</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Астраханская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Новгородская область</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Республика Калмыкия</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Республика Ингушетия</li>
+                      <li><i class="material-icons brand-color mr-10">&#xE834;</i>Чеченская республика и ряд других</li>
+                  </ul>
+              </div>
+              <div class="col-md-8">
+                  <img class="img-responsive" src="{% static 'img/site/karta_proektov.gif" alt="">
+              </div>
+          </div>
+        </section>
+
+        <section class="section-padding">
+          <div class="container">
+
+            <div class="text-center mb-80">
+                <h2 class="section-title">Наш рабочий день</h2>
+                <p class="section-sub">Повседневная и интенсивная работа на результат, которым мы можем гордиться.</p>
+            </div>
+
+
+            <div id="carousel-studio" class="carousel slide carousel-studio" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img class="img-responsive" src="{% static 'img/work/team-work-1.jpg' %}" alt="">
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="{% static 'img/work/team-work-2.jpg' %}" alt="">
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="{% static 'img/work/team-work-3.jpg' %}" alt="">
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="{% static 'img/work/team-work-5.jpg' %}" alt="">
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-studio" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+
+              <a class="right carousel-control" href="#carousel-studio" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+
+            </div>
+
+
+          </div>
+        </section>
+
+
+        <section class="promo-box brand-bg section-padding">
+            <div class="container">
+                <div class="text-center mb-10">
+                    <h2 class="section-title">Благодарности</h2>
+                    <p class="section-sub white-text">Наши успехи в работе, вот главное что ценят наши парнеры и заказчики.</p>
+                </div>
+                <div class="row mb-10">
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/1.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/3.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/4.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/7.jpg' %}" width="100%">
+                    </div>
+                 </div>
+                 <div class="row mb-10">
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/8.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/9.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/10.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/14.jpg' %}" width="100%">
+                    </div>
+                 </div>
+                 <div class="row mb-10">
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/15.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/16.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/17.jpg' %}" width="100%">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="materialboxed" src="{% static 'img/gramoty/18.jpg' %}" width="100%">
+                    </div>
+                 </div>
+            </div>
+        </section>
+        <section class="section-padding">
+          <div class="container">
+            <div class="text-center mb-80">
+                <h2 class="section-title">Наши партнеры и заказчики</h2>
+            </div>
+            <div class="row mb-30">
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/9.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/13.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/3.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/5.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/7.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/8.jpg' %}" width="100%">
+                </div>
+            </div>
+            <div class="row mb-30">
+                <div class="col-md-3">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/1.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-3">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/2.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-3">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/12.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-3">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/10.jpg' %}" width="100%">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/14.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/15.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/16.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/17.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/18.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <img class="materialboxed responsive-img" src="{% static 'img/partners/19.jpg' %}" width="100%">
+                </div>
+            </div>
+          </div>
+        </section>
+        <section class="promo-box brand-bg section-padding">
+            <div class="container">
+                <div class="text-center mb-10">
+                    <h2 class="section-title">Лицензии и сертификаты</h2>
+                    <p class="section-sub white-text">АО "ПРОМСТРОЙСЕРВИС" имеет все необходимые лицензии и разрешения для выполнения полного комплекса проектных и строительно-монтажных работ.</p>
+                </div>
+                <div class="row mb-10">
+                    <div class="col-md-12">
+                        <img class="materialboxed" src="{% static 'img/gramoty/licenz.png" width="100%">
+                    </div>
+                    <div class="col-md-12">
+                      <h3 class="section-title">Лицензии</h3>
+                      <ul class="list white-text">
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Лицензия ФСБ на осуществление работ, связанных с использованием сведений, составляющих государственную тайну от 28.11.2008 г., №002862, Управление ФСБ России</li>
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Лицензия на осуществление производства работ по монтажу, ремонту и обслуживанию средств обеспечения пожарной безопасности зданий и сооружений № 9-Б/00283 от 02.12.2013 г., МЧС России</li>
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Лицензия на осуществление деятельности в области использования источников ионизирующего излучения (генерирующих) № 06.ИЦ.01. 002.Л.000002.10.11, от 14.10.2011г., Федеральная служба по надзору в сфере защиты прав потребителей и благополучия человека.</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-12">
+                      <h3 class="section-title">Свидетельства</h3>
+                      <ul class="list white-text">
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Свидетельство о допусках к выполнению инженерных изысканий 01-И-№1596-3 от 02.12.2014г. г., Российская Федерация</li>
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Свидетельство о допусках к выполнению проектных работ № 0045.5-2009-0603282806-П-076 от 07.11.2014г., Российская Федерация</li>
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Свидетельство о допусках к выполнению строительных работ № 0107.08-2009-0603282806-С-108 от 27.11.2014 г., Российская Федерация</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-12">
+                      <h3 class="section-title">Сертификаты</h3>
+                      <ul class="list white-text">
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Сертификат ISO 18001:2011  о внедрении системы менеджмента охраны здоровья и безопасности персонала,№СДС.ФР.СМ.00111.15, от 04.04.2016 г.</li>
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Сертификат ISO 9001:2011  о внедрении системы менеджмента  качества, №РОСС RU.3552.04ХФ00/SS.SMC0392, от 04.04.2016 г.</li>
+                          <li><i class="material-icons white-text mr-10">&#xE834;</i>Сертификат ISO 14001:2011  о внедрении системы экологического менеджмента,  №СДС. ФР.СМ.00110.15, от 04.04.2016 г.</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
