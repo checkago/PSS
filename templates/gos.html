@@ -64,15 +64,15 @@
                         <li><i class="material-icons brand-color mr-10">&#xE834;</i> «Внутригородские системы инженерно-технического обеспечения, комплексное благоустройство и озеленение инновационного центра «Сколково». Центр холодоснабжения №4 района D3» Группа компаний "ТЕРМОКУЛ"</li>
                     </ul>
                 </div>
-                <div class="col-md-12">
-                    [[Gallery?
-                    	&album=`1`
-                    	&linkToImage=`1`
-                    	&thumbWidth=`120`
-                    	&thumbHeight=`220`
-                    	&itemCls=`gal-item materialboxed`
-                    ]]
+
+                <div class="col-md-12 text-center">
+                    {% for Gallery in images_skolkovo %}
+                        <div class="col-md-2 col-sm-4 col-xs-6 padding-bottom-20">
+                            <img class="" width="160" height="100" src="{{ Gallery.image.url }}" />
+                        </div>
+                    {% endfor %}
                 </div>
+
             </div>
         </section>
         <hr class="mt-20">

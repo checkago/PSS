@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
-from .models import News
+from .models import News, Gallery, Category
 
 
 def index(request):
@@ -48,7 +48,8 @@ def projects(request):
 def gos(request):
     title = 'Title'
     description = ''
-    return render(request, 'gos.html', {'title': title, 'description': description})
+    images_skolkovo = Gallery.objects.filter(category='1')
+    return render(request, 'gos.html', {'title': title, 'description': description, 'images_skolkovo': images_skolkovo})
 
 
 def infra(request):
