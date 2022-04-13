@@ -55,7 +55,8 @@ def gos(request):
 def infra(request):
     title = 'Title'
     description = ''
-    return render(request, 'infra.html', {'title': title, 'description': description})
+    images_infra = Gallery.objects.filter(category='1')
+    return render(request, 'infra.html', {'title': title, 'description': description, 'images_infra': images_infra})
 
 
 def prom(request):

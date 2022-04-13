@@ -19,6 +19,7 @@ class News(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=50, verbose_name='Название')
+    parent_category = models.ForeignKey('self', blank=True, null=True, on_delete=models.CASCADE, verbose_name='Подкатегория')
 
     class Meta:
         verbose_name = 'Категория'
