@@ -48,7 +48,7 @@ class Gallery(models.Model):
 
 class Vacancy(models.Model):
     name = models.CharField(max_length=100, verbose_name='Имя')
-    lastname = models.CharField(max_length=100, verbose_name='Фамилия')
+    lastname = models.CharField(max_length=100, blank=True, verbose_name='Фамилия')
     email = models.EmailField(verbose_name='Почта')
     phone = models.CharField(max_length=18, blank=True, verbose_name='Телефон')
     portfolio = models.URLField(blank=True, verbose_name='Ссылка на портфолио')
