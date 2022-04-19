@@ -6,26 +6,26 @@ from web.forms import FeedbackForm, VacancyForm
 
 
 def index(request):
-    title = ''
-    description = ''
+    title = 'АО "ПРОМСТРОЙСЕРВИС"'
+    description = 'Оффициальный сайт группы компаний ПРОМСТРОЙСЕРВИС'
     return render(request, 'index.html', {'title': title, 'description': description})
 
 
 def about(request):
-    title = 'About'
+    title = 'О нас'
     description = ''
     return render(request, 'about.html', {'title': title, 'description': description})
 
 
 def services(request):
-    title = 'Services'
-    description = ''
+    title = 'Услуги'
+    description = 'Строительные услуги по всей России. Государственные объекты и объекты других сфер.'
     return render(request, 'services.html', {'title': title, 'description': description})
 
 
 def news_list(request):
-    title = 'News List'
-    description = ''
+    title = 'Новости компании'
+    description = 'Лента новостей группы компаний ПРОМСТРОЙСЕРВИС. Новости строительства'
     news_list = News.objects.all()
     paginator = Paginator(news_list, 10)
     page_number = request.GET.get('page')
@@ -42,51 +42,53 @@ def news(request, news_slug):
 
 
 def projects(request):
-    title = 'Projects'
-    description = ''
+    title = 'Наши проекты'
+    description = 'Выполненные проекты в сфере строительства, группой компаний ПРОМСТРОЙСЕРВИС'
     return render(request, 'projects.html', {'title': title, 'description': description})
 
 
 def gos(request):
-    title = 'Title'
-    description = ''
+    title = 'Государственные объекты'
+    description = 'Полный спектр работ по проектированию зданий и сооружений государственного назначения'
     images_skolkovo = Gallery.objects.filter(category='1')
     return render(request, 'gos.html', {'title': title, 'description': description, 'images_skolkovo': images_skolkovo})
 
 
 def infra(request):
-    title = 'Title'
-    description = ''
+    title = 'Инфраструктурное строительство'
+    description = 'Большой и успешный опыт строительства инженерных сетей и коммуникаций, в том числе и на объектах ' \
+                  'Федерального значения.'
     images_infra = Gallery.objects.filter(category='1')
     return render(request, 'infra.html', {'title': title, 'description': description, 'images_infra': images_infra})
 
 
 def prom(request):
-    title = 'Title'
-    description = ''
+    title = 'Промышленное строительство'
+    description = 'Результаты успешного строительства промышленных объектов'
     return render(request, 'prom.html', {'title': title, 'description': description})
 
 
 def jil(request):
-    title = 'Title'
-    description = ''
+    title = 'Жилое строительство'
+    description = 'Строительство качественного, удобного, недорогого жилья и созданием всех условий для максимально' \
+                  ' комфортного проживания.'
     return render(request, 'jil.html', {'title': title, 'description': description})
 
 
 def torg(request):
-    title = 'Title'
+    title = 'торгово-коммерческое строительство'
     description = ''
     return render(request, 'torg.html', {'title': title, 'description': description})
 
 
 def admin(request):
-    title = 'Title'
+    title = 'Административные здания'
     description = ''
     return render(request, 'admin.html', {'title': title, 'description': description})
 
 
 def vacancies(request):
-    title = 'Vacancies'
+    title = 'Работать с нами'
     description = ''
 
     if request.method == 'POST':
@@ -104,7 +106,7 @@ def vacancies(request):
 
 
 def contact(request):
-    title = 'Contact'
+    title = 'Контакты'
     description = ''
 
     if request.method == 'POST':
