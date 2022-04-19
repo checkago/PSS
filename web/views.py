@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
-from .models import News, Gallery, Category
+from django.core.mail import send_mail
+from .models import News, Gallery
+from web.forms import FeedbackForm, VacancyForm
 
 
 def index(request):
@@ -25,17 +27,17 @@ def news_list(request):
     title = 'News List'
     description = ''
     news_list = News.objects.all()
-    paginator = Paginator(news_list, 5)
+    paginator = Paginator(news_list, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'news_list.html', {'title': title, 'description': description, 'news_list': news_list,
                                               'paginator': paginator, 'page_obj': page_obj})
 
 
-def news(request, pk):
-    news = get_object_or_404(News, pk=pk)
+def news(request, news_slug):
+    news = get_object_or_404(News, slug=news_slug)
     title = news.title
-    description = news.description
+    description = news.text
     return render(request, 'news.html', {'title': title, 'description': description, 'news': news})
 
 
@@ -86,11 +88,35 @@ def admin(request):
 def vacancies(request):
     title = 'Vacancies'
     description = ''
-    return render(request, 'vacancies.html', {'title': title, 'description': description})
+
+    if request.method == 'POST':
+        vback = VacancyForm(request.POST, request.FILES)
+
+        if vback.is_valid():
+            Vacancy = vback.save(commit=False)
+            Vacancy.save()
+
+            return redirect('/')
+
+    else:
+        vback = VacancyForm()
+    return render(request, 'vacancies.html', {'title': title, 'description': description, 'vback': vback})
 
 
 def contact(request):
     title = 'Contact'
     description = ''
-    return render(request, 'contact.html', {'title': title, 'description': description})
+
+    if request.method == 'POST':
+        fback = FeedbackForm(request.POST)
+
+        if fback.is_valid():
+            Feedback = fback.save(commit=False)
+            Feedback.save()
+
+            return redirect('/')
+
+    else:
+        fback = FeedbackForm()
+    return render(request, 'contact.html', {'title': title, 'description': description, 'fback': fback})
 

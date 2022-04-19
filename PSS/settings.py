@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
+    'ckeditor',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

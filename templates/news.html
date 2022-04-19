@@ -4,6 +4,25 @@
 
 {% block content %}
 
-    Hello
+    <section class="section-padding gray-bg">
+          <div class="container">
+            <div class="text-center">
+                <h3 class="section-title">{{ news.title }}</h3>
+            </div>
+          </div>
+        </section>
+
+    <section class="section-padding">
+          <div class="container">
+              <div class="col-md-12">
+                  <div class="pad col-md-6 float-left">
+                      <img class="img-responsive" src="{{ news.image.url }}" />
+                  </div>
+                  <div class="padding-top-50 col-md-12">
+                      <span>{{ description | safe }}</span>
+                  </div>
+              </div>
+          </div>
+    </section>
 
 {% endblock %}

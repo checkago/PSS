@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_field %}
 {% load static %}
 
 
@@ -19,12 +20,12 @@
           <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
-
+                    <form method="POST">
+                    {% csrf_token %}
                       <div class="row">
                         <div class="col-md-6">
                           <div class="input-field">
-                            <input type="text" name="name" class="validate" id="name">
+                            {% crispy_field fback.name 'class' 'validate' 'placeholder' ' ' %}
                             <label for="name">Имя</label>
                           </div>
 
@@ -33,7 +34,7 @@
                         <div class="col-md-6">
                           <div class="input-field">
                             <label class="sr-only" for="email">Email</label>
-                            <input id="email" type="email" name="email" class="validate" >
+                            {% crispy_field fback.email 'class' 'validate' 'placeholder' ' ' %}
                             <label for="email" data-error="wrong" data-success="right">Email</label>
                           </div>
                         </div><!-- /.col-md-6 -->
@@ -42,7 +43,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="input-field">
-                            <input id="phone" type="tel" name="phone" class="validate" >
+                            {% crispy_field fback.phone 'class' 'validate' 'placeholder' ' ' %}
                             <label for="phone">Телефон</label>
                           </div>
                         </div><!-- /.col-md-6 -->
@@ -56,11 +57,11 @@
                       </div><!-- /.row -->
 
                       <div class="input-field">
-                        <textarea name="message" id="message" class="materialize-textarea" ></textarea>
+                        {% crispy_field fback.text 'class' 'materialize-textarea' 'placeholder' ' ' %}
                         <label for="message">Текст сообщения</label>
                       </div>
 
-                      <button type="submit" name="submit" class="waves-effect waves-light btn btn-lg submit-button mt-30 text-capitalize">отправить</button>
+                      <button type="submit" name="submit" class="btn submit-button mt-30 text-capitalize">отправить</button>
                     </form>
                 </div><!-- /.col-md-8 -->
 

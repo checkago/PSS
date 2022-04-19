@@ -23,11 +23,11 @@ h1, h2, h3, h4, h5, h6,
 
 /*button style*/
 .btn {
-    height: 55px;
-    padding: 12px 20px;
-    font-size: 16px;
+    height: 35px;
+    padding: 4px 18px;
+    font-size: 12px;
     line-height: 30px;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2ecc71;
     border: 0;
 }

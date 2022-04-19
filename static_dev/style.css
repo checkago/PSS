@@ -418,6 +418,9 @@ thead {
 
 
 /*padding-top*/
+.padding-top-20 {
+    padding-top: 20px;
+}
 .padding-top-50 {
     padding-top: 50px;
 }

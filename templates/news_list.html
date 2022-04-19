@@ -4,6 +4,84 @@
 
 {% block content %}
 
-    Hello
+    <section class="section-padding gray-bg">
+          <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Новости компании</h2>
+            </div>
+          </div>
+        </section>
+
+    <section class="section-padding">
+          <div class="container">
+          <div class="col-md-12 center-align">
+              {% if page_obj %}
+              <ul class="pagination">
+               {% if page_obj.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+                </li>
+                  {% endif %}
+              {% for p in paginator.page_range %}
+                  {% if page_obj.number == p %}
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">{{ p }} <span class="visually-hidden"></span></a>
+                </li>
+                   {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+                  {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.next_page_number }}">Следующая</a>
+                </li>
+               {% endif %}
+              </ul>
+                {% endif %}
+          </div>
+          <div class="col-md-12">
+              {% for News in page_obj %}
+              <div class="col-md-12 card padding-bottom-20 padding-top-20">
+                  <div class="card-header">
+                      <h3 class="right-align text-uppercase"><strong>{{ News.title }}</strong></h3>
+                  </div>
+                  <div class="card-body">
+                      <div class="col-md-3">
+                          <a href="{{ News.get_absolute_url }}"><img class="img-responsive" src="{{ News.image.url }}" /></a>
+                      </div>
+                      <div class="col-md-9 left-align">
+                          <p>{{ News.text | safe | slice:":280" }}...</p>
+                          <p class="right-align"><a class="btn btn-sm btn-default" href="{{ News.get_absolute_url }}">Подробнее</a></p>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+          <div class="col-md-12 center-align">
+              {% if page_obj %}
+              <ul class="pagination">
+               {% if page_obj.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+                </li>
+                  {% endif %}
+              {% for p in paginator.page_range %}
+                  {% if page_obj.number == p %}
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">{{ p }} <span class="visually-hidden"></span></a>
+                </li>
+                   {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+                  {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.next_page_number }}">Следующая</a>
+                </li>
+               {% endif %}
+              </ul>
+                {% endif %}
+          </div>
+    </section>
 
 {% endblock %}

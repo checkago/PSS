@@ -20,7 +20,7 @@ urlpatterns = [
     path('projects/admin', views.admin, name='admin'),
 
     path('news-list/', views.news_list, name='news_list'),
-    path('news/<str:slug>/', views.news, name='news'),
+    path('news/<str:news_slug>/', views.news, name='news'),
     path('apply-from/', views.vacancies, name='vacancies'),
     path('contact/', views.contact, name='contact'),
 

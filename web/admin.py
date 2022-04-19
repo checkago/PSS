@@ -1,13 +1,24 @@
 from django.contrib import admin
 from django.shortcuts import render
 from django import forms
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
+from ckeditor.widgets import CKEditorWidget
 
-from web.models import News, Category, Gallery
+from web.models import News, Category, Gallery, Feedback, Vacancy
+
+
+class NewsAdminForm(forms.ModelForm):
+    text = forms.CharField(widget=CKEditorWidget(config_name='awesome_ckeditor'))
+
+    class Meta:
+        verbose_name = 'Текст'
+        model = News
+        fields = '__all__'
 
 
 class NewsAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
+    form = NewsAdminForm
     list_display = ('title',)
 
 
@@ -64,5 +75,15 @@ class GalleryAdmin(admin.ModelAdmin):
     change_category.short_description = "Изменить категорию"
 
 
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone', 'text')
+
+
+class VacancyAdmin(admin.ModelAdmin):
+    list_display = ('name', 'lastname', 'email', 'phone', 'resume', 'letter')
+
+
 admin.site.register(News, NewsAdmin)
 admin.site.register(Gallery, GalleryAdmin)
+admin.site.register(Feedback, FeedbackAdmin)
+admin.site.register(Vacancy, VacancyAdmin)
