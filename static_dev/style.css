@@ -728,6 +728,9 @@ thead {
 .dark-bg {
     background: #202020 !important;
 }
+.gray-dark-bg {
+    background: #d2d2d3 !important;
+}
 .dark-bg.lighten-1 {
     background-color: #1e262a !important;
 }
