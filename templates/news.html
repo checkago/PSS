@@ -5,14 +5,22 @@
 {% block content %}
 
     <section class="section-padding gray-bg">
-          <div class="container">
+        <div class="container">
             <div class="text-center">
                 <h3 class="section-title">{{ news.title }}</h3>
             </div>
-          </div>
-        </section>
+        </div>
+    </section>
 
-    <section class="section-padding">
+    <div class="container padding-top-20 padding-bottom-20">
+        <ul class="nav nav-tabs">
+            <li><a class="green-text" href="/"><strong>Главная</strong></a></li>
+            <li><a class="green-text" href="{% url 'news_list' %}"><strong>Все новости</strong></a></li>
+            <li><a class="not-active" href="#">{{ title }}</a></li>
+        </ul>
+    </div>
+
+    <section class="section">
           <div class="container">
               <div class="col-md-12">
                   <div class="pad col-md-6 float-left">
