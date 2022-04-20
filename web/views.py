@@ -13,7 +13,7 @@ def index(request):
 
 def about(request):
     title = 'О нас'
-    description = ''
+    description = 'Информация о группе компаний ПРОМСТРОЙСЕРВИС'
     return render(request, 'about.html', {'title': title, 'description': description})
 
 
