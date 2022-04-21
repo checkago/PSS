@@ -65,6 +65,7 @@ class Vacancy(models.Model):
 
 
 class Feedback(models.Model):
+    date = models.DateField(default=date.today, blank=True, verbose_name='Дата')
     name = models.CharField(max_length=150, verbose_name='Имя')
     email = models.EmailField(verbose_name='Почта')
     phone = models.CharField(max_length=18, blank=True, verbose_name='Телефон')

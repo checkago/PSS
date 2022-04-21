@@ -76,7 +76,7 @@ class GalleryAdmin(admin.ModelAdmin):
 
 
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone', 'text')
+    list_display = ('date', 'name', 'email', 'phone', 'text')
 
 
 class VacancyAdmin(admin.ModelAdmin):
