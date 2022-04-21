@@ -80,7 +80,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 
 class VacancyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'lastname', 'email', 'phone', 'resume', 'letter')
+    list_display = ('date', 'name', 'lastname', 'email', 'phone', 'resume', 'letter')
 
 
 admin.site.register(News, NewsAdmin)
