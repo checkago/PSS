@@ -78,8 +78,8 @@
 
                 <div class="gallery">
                     {% for Gallery in images_skolkovo %}
-                        <div>
-                            <img src="{{ Gallery.image.url }}" />
+                        <div class="card round-tab">
+                            <a id="show-modal" href=""><img src="{{ Gallery.image.url }}" /></a>
                         </div>
                     {% endfor %}
                 </div>

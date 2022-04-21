@@ -50,7 +50,7 @@ def projects(request):
 def gos(request):
     title = 'Государственные объекты'
     description = 'Полный спектр работ по проектированию зданий и сооружений государственного назначения'
-    images_skolkovo = Gallery.objects.filter(category='1')
+    images_skolkovo = Gallery.objects.filter(category='7')
     return render(request, 'gos.html', {'title': title, 'description': description, 'images_skolkovo': images_skolkovo})
 
 
@@ -58,7 +58,7 @@ def infra(request):
     title = 'Инфраструктурное строительство'
     description = 'Большой и успешный опыт строительства инженерных сетей и коммуникаций, в том числе и на объектах ' \
                   'Федерального значения.'
-    images_infra = Gallery.objects.filter(category='1')
+    images_infra = Gallery.objects.filter(category='8')
     return render(request, 'infra.html', {'title': title, 'description': description, 'images_infra': images_infra})
 
 
