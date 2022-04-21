@@ -114,7 +114,7 @@ def contact(request):
 
         if fback.is_valid():
             Feedback = fback.save(commit=False)
-            cd = form.cleaned_data
+            cd = fback.cleaned_data
             Feedback.save()
             subject = 'Сообщение от {} ({})'.format(cd['name'], cd['email'])
             message = '"{}". {} | {} | {}'.format(cd['text'], cd['name'], cd['phone'], cd['site'])
