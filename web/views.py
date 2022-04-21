@@ -118,7 +118,7 @@ def contact(request):
             Feedback.save()
             subject = 'Сообщение от {} ({})'.format(cd['name'], cd['email'])
             message = '"{}". {} | {} | {}'.format(cd['text'], cd['name'], cd['phone'], cd['site'])
-            send_mail(subject, message, 'site@aopss.ru', [cd['email'], 'info@aopss.ru'])
+            send_mail(subject, message, 'site@aopss.ru', [cd['email'], 'site@aopss.ru'])
             sent = True
 
             return redirect('/')
