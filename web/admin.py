@@ -23,7 +23,7 @@ class NewsAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'parent_category')
+    list_display = ('id', 'name', 'parent_category')
     list_filter = ['parent_category']
 
 
