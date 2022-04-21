@@ -1,3 +1,4 @@
+import cd as cd
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 from django.core.mail import send_mail
@@ -115,6 +116,10 @@ def contact(request):
         if fback.is_valid():
             Feedback = fback.save(commit=False)
             Feedback.save()
+            subject = 'Сообщение от {} ({})'.format(cd['name'], cd['email'])
+            message = '"{}". {} | {} | {}'.format(cd['text'], cd['name'], cd['phone'], cd['site'])
+            send_mail(subject, message, 'site@aopss.ru', [cd['email'], 'checkago@yandex.ru'])
+            sent = True
 
             return redirect('/')
 
