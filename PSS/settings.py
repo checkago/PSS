@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'web',
     'ckeditor',
     'crispy_forms',
+    'snowpenguin.django.recaptcha3',
 ]
 
 
@@ -111,6 +112,13 @@ EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'site@aopss.ru'
 EMAIL_HOST_PASSWORD = 'VRss24226'
+
+
+RECAPTCHA_PRIVATE_KEY = '6LciDo4fAAAAAMuH7by4QSTSagK-H2nvA9-DP6dc'
+RECAPTCHA_PUBLIC_KEY = '6LciDo4fAAAAAJQlepwhfnsx-6E9moeYtY2xOk3r'
+RECAPTCHA_DEFAULT_ACTION = 'generic'
+RECAPTCHA_SCORE_THRESHOLD = 0.5
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
