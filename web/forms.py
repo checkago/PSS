@@ -11,7 +11,7 @@ class FeedbackForm(forms.ModelForm):
 
     class Meta:
         model = Feedback
-        fields = ('name', 'phone', 'email', 'text')
+        fields = ('name', 'phone', 'email', 'text', 'site')
 
 
 class VacancyForm(forms.ModelForm):
@@ -19,3 +19,4 @@ class VacancyForm(forms.ModelForm):
     class Meta:
         model = Vacancy
         fields = ('name', 'lastname', 'email', 'phone', 'portfolio', 'profile', 'where', 'resume', 'letter')
+
