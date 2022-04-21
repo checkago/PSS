@@ -129,7 +129,7 @@
                             <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
                         </div>
                     {% endfor %}
-                </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -148,14 +148,14 @@
                         <li><i class="material-icons brand-color mr-10">&#xE834;</i> Служебно-техническое здание управления г. Ростов</li>
                       </ul>
                 </div>
-                <div class="col-md-12">
-                    [[Gallery?
-                    	&album=`4`
-                    	&linkToImage=`1`
-                    	&thumbWidth=`120`
-                    	&thumbHeight=`220`
-                    	&itemCls=`gal-item materialboxed`
-                    ]]
+                <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_admin %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>
