@@ -7,6 +7,14 @@ class FeedbackForm(forms.ModelForm):
         label='Сообщение',
         widget=forms.Textarea(attrs={'rows': '2'})
     )
+    email = forms.EmailField(required=False, widget=forms.EmailInput)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['name'].label = 'Имя'
+        self.fields['email'].label = 'E-mail'
+        self.fields['phone'].label = 'Номер телефона'
+        self.fields['site'].label = 'Сайт'
 
     def clean_email(self):
         email = self.cleaned_data['email']
