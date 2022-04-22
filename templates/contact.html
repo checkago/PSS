@@ -14,17 +14,10 @@
           </div>
         </section>
 
-        {% for error in form.errors.email %}
-        <div class="padding-top-20 padding-bottom-20">
-                <div class="">
-                    <div class=""><i class=""></i>
-                    </div>
-                    <div class="">
-                        <h6 class="">Ошибка!</h6>
-                        <div class="">{{ error }}</div>
-                    </div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {% for error in fback.errors.email %}
+            <div class="container padding-top-20 text-center bg-danger">
+                <h4 class="">Ошибка!</h4>
+                <div class="">{{ error }}</div>
             </div>
         {% endfor %}
 
