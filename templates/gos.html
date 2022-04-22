@@ -213,14 +213,14 @@
                         </tbody>
                       </table>
                 </div>
-                <div class="col-md-12">
-                    [[Gallery?
-                    	&album=`5`
-                    	&linkToImage=`1`
-                    	&thumbWidth=`120`
-                    	&thumbHeight=`220`
-                    	&itemCls=`gal-item materialboxed`
-                    ]]
+                <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_gos %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>
