@@ -138,7 +138,7 @@ def contact(request):
 
             return redirect('/')
 
-            secret_key = settings.RECAPTCHA_PRIVATE_KEY
+            secret_key = settings.RECAPTCHA_SECRET_KEY
 
             # captcha verification
             data = {
@@ -157,5 +157,5 @@ def contact(request):
         fback = FeedbackForm()
 
     return render(request, 'contact.html', {'title': title, 'description': description, 'fback': fback,
-                                            'site_key': settings.RECAPTCHA_PUBLIC_KEY})
+                                            'site_key': settings.RECAPTCHA_SITE_KEY})
 
