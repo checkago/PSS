@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.conf import settings
 from django.core.paginator import Paginator
 from django.core.mail import send_mail
 from .models import News, Gallery
 from web.forms import FeedbackForm, VacancyForm
+
+
 
 
 def index(request):
@@ -127,7 +130,24 @@ def contact(request):
 
             return redirect('/')
 
+            secret_key = settings.RECAPTCHA_PRIVATE_KEY
+
+            # captcha verification
+            data = {
+                'response': data.get('g-recaptcha-response'),
+                'secret': secret_key
+            }
+            resp = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+            result_json = resp.json()
+
+            print(result_json)
+
+            if not result_json.get('success'):
+                return render(request, 'contact.html', {'is_robot': True})
+
     else:
         fback = FeedbackForm()
-    return render(request, 'contact.html', {'title': title, 'description': description, 'fback': fback})
+
+    return render(request, 'contact.html', {'title': title, 'description': description, 'fback': fback,
+                                            'site_key': settings.RECAPTCHA_PUBLIC_KEY})
 

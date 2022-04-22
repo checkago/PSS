@@ -59,7 +59,6 @@
             cursor: default;
         }
     </style>
-
 </head>
 
 <body>
@@ -187,6 +186,26 @@
             $('#overlay').toggleClass('open');
         });
     </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+        <script>
+          // 3
+          grecaptcha.ready(function() {
+              // 4
+              $('#contactform').submit(function(e){
+                  var form = this;
+                  // 5
+                  e.preventDefault()
+                  grecaptcha.execute('reCAPTCHA_site_key', {action: 'contactform'}).then(function(token) {
+                      // 6
+                      $('#recaptcha').val(token)
+                      // 7
+                      form.submit()
+                  });
+              })
+
+          });
+        </script>
 
 </body>
 

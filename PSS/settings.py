@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'web',
     'ckeditor',
     'crispy_forms',
-    'snowpenguin.django.recaptcha3',
 ]
 
 
