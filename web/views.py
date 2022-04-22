@@ -75,7 +75,7 @@ def prom(request):
     title = 'Промышленное строительство'
     description = 'Результаты успешного строительства промышленных объектов'
     images_prom = Gallery.objects.filter(category='2')
-    return render(request, 'prom.html', {'title': title, 'description': description, 'image_prom': images_prom})
+    return render(request, 'prom.html', {'title': title, 'description': description, 'images_prom': images_prom})
 
 
 def jil(request):
