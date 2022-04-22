@@ -77,15 +77,15 @@
         <section class="promo-box brand-bg section-padding">
             <div class="container">
 
-                    <div class="col-md-12">
-                        [[Gallery?
-                        	&album=`8`
-                        	&linkToImage=`1`
-                        	&thumbWidth=`120`
-                        	&thumbHeight=`250`
-                        	&itemCls=`gal-item materialboxed`
-                        ]]
+                <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_jil_1 %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
                     </div>
+                </div>
 
             </div>
         </section>
@@ -107,15 +107,15 @@
             <section class="promo-box brand-bg section-padding">
             <div class="container">
 
-                    <div class="col-md-12">
-                        [[Gallery?
-                        	&album=`9`
-                        	&linkToImage=`1`
-                        	&thumbWidth=`350`
-                        	&thumbHeight=`180`
-                        	&itemCls=`gal-item materialboxed`
-                        ]]
+                    <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_jil_2 %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
                     </div>
+                </div>
 
                 </div>
             </section>
@@ -132,15 +132,15 @@
             <section class="promo-box brand-bg section-padding">
             <div class="container">
 
-                    <div class="col-md-12">
-                        [[Gallery?
-                        	&album=`10`
-                        	&linkToImage=`1`
-                        	&thumbWidth=`350`
-                        	&thumbHeight=`180`
-                        	&itemCls=`gal-item materialboxed`
-                        ]]
+                <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_jil_3 %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
                     </div>
+                </div>
 
                 </div>
             </section>

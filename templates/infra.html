@@ -48,14 +48,14 @@
                         <li><i class="material-icons brand-color mr-10">&#xE834;</i> Строительство автодороги «Средние Ачалуки – ГОК Средние Ачалуки» Республика Ингушетия</li>
                      </ul>
                 </div>
-                <div class="col-md-12">
-                    [[Gallery?
-                    	&album=`6`
-                    	&linkToImage=`1`
-                    	&thumbWidth=`150`
-                    	&thumbHeight=`250`
-                    	&itemCls=`gal-item materialboxed`
-                    ]]
+                <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_infra %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>

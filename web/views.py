@@ -67,32 +67,40 @@ def infra(request):
     title = 'Инфраструктурное строительство'
     description = 'Большой и успешный опыт строительства инженерных сетей и коммуникаций, в том числе и на объектах ' \
                   'Федерального значения.'
-    return render(request, 'infra.html', {'title': title, 'description': description})
+    images_infra = Gallery.objects.filter(category='4')
+    return render(request, 'infra.html', {'title': title, 'description': description, 'images_infra': images_infra})
 
 
 def prom(request):
     title = 'Промышленное строительство'
     description = 'Результаты успешного строительства промышленных объектов'
-    return render(request, 'prom.html', {'title': title, 'description': description})
+    images_prom = Gallery.objects.filter(category='2')
+    return render(request, 'prom.html', {'title': title, 'description': description, 'image_prom': images_prom})
 
 
 def jil(request):
     title = 'Жилое строительство'
     description = 'Строительство качественного, удобного, недорогого жилья и созданием всех условий для максимально' \
                   ' комфортного проживания.'
-    return render(request, 'jil.html', {'title': title, 'description': description})
+    images_jil_1 = Gallery.objects.filter(category='12')
+    images_jil_2 = Gallery.objects.filter(category='13')
+    images_jil_3 = Gallery.objects.filter(category='14')
+    return render(request, 'jil.html', {'title': title, 'description': description, 'images_jil_1': images_jil_1,
+                                        'images_jil_2': images_jil_2, 'images_jil_3': images_jil_3})
 
 
 def torg(request):
     title = 'торгово-коммерческое строительство'
-    description = ''
-    return render(request, 'torg.html', {'title': title, 'description': description})
+    description = 'Строительство торгово-коммерческих комплексов'
+    images_torg = Gallery.objects.filter(category='5')
+    return render(request, 'torg.html', {'title': title, 'description': description, 'images_torg': images_torg})
 
 
 def admin(request):
     title = 'Административные здания'
-    description = ''
-    return render(request, 'admin.html', {'title': title, 'description': description})
+    description = 'Строительство административных зданий и комплексов'
+    images_admin = Gallery.objects.filter(category='6')
+    return render(request, 'admin.html', {'title': title, 'description': description, 'images_admin': images_admin})
 
 
 def vacancies(request):

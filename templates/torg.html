@@ -40,15 +40,15 @@
         <section class="promo-box brand-bg section-padding">
             <div class="container">
 
-                    <div class="col-md-12">
-                        [[Gallery?
-                        	&album=`11`
-                        	&linkToImage=`1`
-                        	&thumbWidth=`120`
-                        	&thumbHeight=`250`
-                        	&itemCls=`gal-item materialboxed`
-                        ]]
+                <div class="col-md-12 text-center">
+                    <div class="gallery">
+                    {% for Gallery in images_torg %}
+                        <div class="card">
+                            <a href="{{ Gallery.image.url }}" target="_blank"><img src="{{ Gallery.image.url }}" /></a>
+                        </div>
+                    {% endfor %}
                     </div>
+                </div>
 
             </div>
         </section>
