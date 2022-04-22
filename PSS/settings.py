@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-r4!)ak&3!(-7svb8ksn9we(rl0g*&i*n@rd6()!q0qm5ld7li*
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['aopss.ru', 'pss.group', '127.0.0.1', '883951-ci93375.tmweb.ru', '94.228.123.23']
+ALLOWED_HOSTS = ['aopss.ru', 'pss.group', 'псс.рф', '127.0.0.1', '883951-ci93375.tmweb.ru', '94.228.123.23']
 
 # env = environ.Env()
 # environ.Env.read_env('.env')
