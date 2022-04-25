@@ -74,7 +74,7 @@
         <div class="nav-overlay" id="overlay">
         <nav class="overlay-menu">
           <ul>
-            <li><a href="/">Главная</a></li>
+            <li><a href="{% url 'index' %}">Главная</a></li>
             <li><a href="{% url 'about' %}">О компании</a></li>
             <li><a href="{% url 'services' %}">Услуги</a></li>
             <li><a href="{% url 'projects' %}">Проекты</a></li>
@@ -136,12 +136,12 @@
                     </div>
                     <div class="col-md-7">
                       <ul>
-                        <li><a href="/">Главная</a></li>
-                        <li><a href="about-us">О компании</a></li>
-                        <li><a href="service">Услуги</a></li>
-                        <li><a href="projects">Проекты</a></li>
-                        <li><a href="news_list">Новости</a></li>
-                        <li><a href="contact">Контакты</a></li>
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><a href="{% url 'about' %}">О компании</a></li>
+                        <li><a href="{% url 'services' %}">Услуги</a></li>
+                        <li><a href="{% url 'projects' %}">Проекты</a></li>
+                        <li><a href="{% url 'news_list' %}">Новости</a></li>
+                        <li><a href="{% url 'contact' %}">Контакты</a></li>
                       </ul>
                     </div>
                   </div>
