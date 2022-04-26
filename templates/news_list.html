@@ -43,7 +43,14 @@
               {% for News in page_obj %}
               <div class="col-md-12 card padding-bottom-20 padding-top-20">
                   <div class="card-header">
-                      <h3 class="right-align text-uppercase"><strong>{{ News.title }}</strong></h3>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <h3 class="left-align"><strong>{{ News.date }}</strong></h3>
+                          </div>
+                          <div class="col-md-6">
+                              <h3 class="right-align text-uppercase"><strong>{{ News.title }}</strong></h3>
+                          </div>
+                      </div>
                   </div>
                   <div class="card-body">
                       <div class="col-md-3">
