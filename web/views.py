@@ -29,7 +29,7 @@ def services(request):
 def news_list(request):
     title = 'Новости компании'
     description = 'Лента новостей группы компаний ПРОМСТРОЙСЕРВИС. Новости строительства'
-    news_list = News.objects.all()
+    news_list = News.objects.order_by('-date')
     paginator = Paginator(news_list, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
