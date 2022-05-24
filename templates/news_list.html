@@ -57,7 +57,7 @@
                           <a href="{{ News.get_absolute_url }}"><img class="img-responsive" src="{{ News.image.url }}" /></a>
                       </div>
                       <div class="col-md-9 left-align">
-                          <p>{{ News.text | safe | slice:":280" }}...</p>
+                          <p>{{ News.text | safe | slice:":200" }}...</p>
                           <p class="right-align"><a class="btn btn-sm btn-default" href="{{ News.get_absolute_url }}">Подробнее</a></p>
                       </div>
                   </div>
