@@ -1,5 +1,4 @@
 from django import forms
-from snowpenguin.django.recaptcha3.fields import ReCaptchaField
 from web.models import Feedback, Vacancy
 
 
@@ -9,7 +8,7 @@ class FeedbackForm(forms.ModelForm):
         widget=forms.Textarea(attrs={'rows': '2'})
     )
     email = forms.EmailField(required=False, widget=forms.EmailInput)
-    captcha = ReCaptchaField()
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
