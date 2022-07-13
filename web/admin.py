@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django import forms
 from django.http import HttpResponseRedirect
 from ckeditor.widgets import CKEditorWidget
-from django.utils.translation import ugettext_lazy as _
+
 
 from web.models import News, Category, Gallery, Feedback, Vacancy
 
