@@ -1,5 +1,6 @@
 from django import forms
 from web.models import Feedback, Vacancy
+from snowpenguin.django.recaptcha3.fields import ReCaptchaField
 
 
 class FeedbackForm(forms.ModelForm):
@@ -8,6 +9,7 @@ class FeedbackForm(forms.ModelForm):
         widget=forms.Textarea(attrs={'rows': '2'})
     )
     email = forms.EmailField(required=False, widget=forms.EmailInput)
+    captcha = ReCaptchaField()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,7 +21,7 @@ class FeedbackForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data['email']
         domain = email.split('.')[-1]
-        if domain in ['com', 'net', 'org', 'xyz', 'de', 'fr', 'ua', 'nl', 'cz', 'group', 'biz']:
+        if domain in ['com', 'net', 'org', 'xyz', 'de', 'fr', 'ua', 'nl', 'cz', 'group', 'biz', 'ca', 'no']:
             raise forms.ValidationError(f'Использование почтового ящика в домене .{domain} заблокированно')
         return email
 
