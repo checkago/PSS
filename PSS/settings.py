@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'web',
     'ckeditor',
     'crispy_forms',
-    'snowpenguin.django.recaptcha3',
+    'snowpenguin.django.recaptcha3'
 ]
 
 
@@ -152,7 +152,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 STATIC_URL = '/static/'

@@ -1,6 +1,6 @@
 from django import forms
-from web.models import Feedback, Vacancy
 from snowpenguin.django.recaptcha3.fields import ReCaptchaField
+from web.models import Feedback, Vacancy
 
 
 class FeedbackForm(forms.ModelForm):
